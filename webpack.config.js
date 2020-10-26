@@ -1,3 +1,6 @@
+const postCSSPlugins = {}
+
+
 module.exports = {
     entry: './App/assets/scripts/App.js'
 }
@@ -12,7 +15,7 @@ module.exports = {
                 use: ['style-loader','css-loader', {loader:'postcss-loader', options: {plugins: postCSSPlugins}}]
             }
         ]
-    }
+    },
     output: {
         filename: 'bundled.js', 
         path: path.resolve(__dirname, 'app')
